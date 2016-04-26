@@ -8,7 +8,8 @@
 
 #import "LoginTableViewController.h"
 #import "UIView+Frame.h"
-
+//系统颜色
+#define kSysColor        [UIColor colorWithRed:31/255.0 green:109/255.0 blue:186/255.0 alpha:0.9]
 @interface LoginTableViewController ()
 @property (strong,nonatomic) UITextField  *userTextFiled;
 @property (strong,nonatomic) UITextField  *pwdTextFiled;
@@ -23,7 +24,7 @@
     if (!_leftBtn) {
         _leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _leftBtn.selected = YES;
-        [_leftBtn setTitleColor:kRGBColor(31, 109, 186) forState:UIControlStateSelected];
+        [_leftBtn setTitleColor:kSysColor forState:UIControlStateSelected];
         [_leftBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     }
     return _leftBtn;
@@ -32,7 +33,7 @@
     if (!_rightBtn) {
         _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _rightBtn.selected = NO;
-        [_rightBtn setTitleColor:kRGBColor(31, 109, 186) forState:UIControlStateSelected];
+        [_rightBtn setTitleColor:kSysColor forState:UIControlStateSelected];
         [_rightBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     }
     return _rightBtn;
@@ -163,19 +164,19 @@ kRemoveCellSeparator;
     [btn1 setFrame:CGRectMake(0, 50,bWidth/2 ,50 )];
     [btn1 setTitle:@"已有账号" forState:UIControlStateNormal];
     [btn1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn1 setBackgroundColor:kRGBColor(31, 109, 186)];
+    [btn1 setBackgroundColor:kSysColor];
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn2 setFrame:CGRectMake(bWidth/2+2, 50, bWidth/2, 50)];
     [btn2 setTitle:@"快速游戏" forState:UIControlStateNormal];
     [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn2 setBackgroundColor:kRGBColor(31, 109, 186)];
+    [btn2 setBackgroundColor:kSysColor];
     
     UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn3 setFrame:CGRectMake(0, 50+50+2, footerView.width, 50)];
     [btn3 setTitle:@"快速注册" forState:UIControlStateNormal];
     [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn3 setBackgroundColor:kRGBColor(31, 109, 186)];
+    [btn3 setBackgroundColor:kSysColor];
     
     [footerView addSubview:btn1];
     [footerView addSubview:btn2];

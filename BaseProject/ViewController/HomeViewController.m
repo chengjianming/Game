@@ -9,6 +9,8 @@
 
 #import "HomeViewController.h"
 #import "LoginTableViewController.h"
+#import "UserTableViewController.h"
+#import "PayViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -29,6 +31,26 @@
         [self.navigationController pushViewController:ltvc animated:YES];
     } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn1 setFrame:CGRectMake(100, 150, 50, 50)];
+    [btn1 setTitle:@"user" forState:UIControlStateNormal];
+    [btn1 setBackgroundColor:[UIColor yellowColor]];
+    [btn1 bk_addEventHandler:^(id sender) {
+        UserTableViewController *uvc = [[UserTableViewController alloc]init];
+        [self.navigationController pushViewController:uvc animated:YES];
+    } forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn1];
+    
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn2 setFrame:CGRectMake(100, 200, 50, 50)];
+    [btn2 setTitle:@"pay" forState:UIControlStateNormal];
+    [btn2 setBackgroundColor:[UIColor redColor]];
+    [btn2 bk_addEventHandler:^(id sender) {
+        PayViewController *pvc = [[PayViewController alloc]init];
+        [self.navigationController pushViewController:pvc animated:YES];
+    } forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn2];
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }

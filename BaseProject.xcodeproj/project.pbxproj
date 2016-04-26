@@ -68,6 +68,9 @@
 		8832FE701CCE234500E2BA3F /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE6F1CCE234500E2BA3F /* LoginTableViewController.m */; };
 		8832FE731CCE256C00E2BA3F /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE721CCE256C00E2BA3F /* UIView+Frame.m */; };
 		8832FE761CCE273700E2BA3F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE751CCE273700E2BA3F /* HomeViewController.m */; };
+		88EC11701CCF3367003B41DA /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EC116F1CCF3367003B41DA /* UserTableViewController.m */; };
+		88EC11721CCF4F8F003B41DA /* quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EC11711CCF4F8F003B41DA /* quit.png */; };
+		88EC11751CCF5750003B41DA /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EC11741CCF5750003B41DA /* PayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +174,11 @@
 		8832FE721CCE256C00E2BA3F /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		8832FE741CCE273700E2BA3F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		8832FE751CCE273700E2BA3F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		88EC116E1CCF3367003B41DA /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
+		88EC116F1CCF3367003B41DA /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
+		88EC11711CCF4F8F003B41DA /* quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quit.png; sourceTree = "<group>"; };
+		88EC11731CCF5750003B41DA /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		88EC11741CCF5750003B41DA /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -473,8 +481,13 @@
 				3835CFB61BD90E150024CA48 /* ViewController.m */,
 				8832FE741CCE273700E2BA3F /* HomeViewController.h */,
 				8832FE751CCE273700E2BA3F /* HomeViewController.m */,
+				88EC116E1CCF3367003B41DA /* UserTableViewController.h */,
+				88EC116F1CCF3367003B41DA /* UserTableViewController.m */,
 				8832FE6E1CCE234500E2BA3F /* LoginTableViewController.h */,
 				8832FE6F1CCE234500E2BA3F /* LoginTableViewController.m */,
+				88EC11731CCF5750003B41DA /* PayViewController.h */,
+				88EC11741CCF5750003B41DA /* PayViewController.m */,
+				88EC11711CCF4F8F003B41DA /* quit.png */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -576,6 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3885C8E91BE8E8FB009441EA /* ios-social-sdk-login-quick.html in Resources */,
+				88EC11721CCF4F8F003B41DA /* quit.png in Resources */,
 				3885C8D81BE8E8FB009441EA /* UMShareEditViewController.xib in Resources */,
 				3885C8D61BE8E8FB009441EA /* UMSCommentInputController.xib in Resources */,
 				3885C8E51BE8E8FB009441EA /* ios-social-sdk-comment-detail.html in Resources */,
@@ -661,6 +675,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88EC11701CCF3367003B41DA /* UserTableViewController.m in Sources */,
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
 				8832FE701CCE234500E2BA3F /* LoginTableViewController.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
@@ -670,6 +685,7 @@
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
 				8832FE761CCE273700E2BA3F /* HomeViewController.m in Sources */,
+				88EC11751CCF5750003B41DA /* PayViewController.m in Sources */,
 				8832FE731CCE256C00E2BA3F /* UIView+Frame.m in Sources */,
 				3835CFB71BD90E150024CA48 /* ViewController.m in Sources */,
 				3804CE511BD758F10046C8C8 /* AppDelegate+Category.m in Sources */,
