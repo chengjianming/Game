@@ -26,6 +26,8 @@ typedef void(^CompletionHandle)(NSError *error);
 
 @property(nonatomic,strong) NSMutableArray *dataArr;
 @property(nonatomic,strong) NSURLSessionDataTask *dataTask;
+@property(nonatomic,strong) NSMutableDictionary *dataDic;
+
 - (void)cancelTask;  //取消任务
 - (void)suspendTask; //暂停任务
 - (void)resumeTask;  //继续任务

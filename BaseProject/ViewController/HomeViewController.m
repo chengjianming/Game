@@ -52,6 +52,8 @@
     } forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     // Do any additional setup after loading the view.
 }
 

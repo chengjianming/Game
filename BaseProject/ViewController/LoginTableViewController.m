@@ -8,6 +8,7 @@
 
 #import "LoginTableViewController.h"
 #import "UIView+Frame.h"
+#import "NSString+PJR.h"
 //系统颜色
 #define kSysColor        [UIColor colorWithRed:31/255.0 green:109/255.0 blue:186/255.0 alpha:0.9]
 @interface LoginTableViewController ()
@@ -62,6 +63,19 @@ kRemoveCellSeparator;
    //修改字体颜色及字体大小
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:17]};
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+    //设置左侧Navbar
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 15, 30);
+    
+    [backBtn setImage:[UIImage imageNamed:@"icon-back"] forState:UIControlStateNormal];
+    [backBtn bk_addEventHandler:^(id sender) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+    [self.navigationItem setLeftBarButtonItem:backItem];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -122,7 +136,7 @@ kRemoveCellSeparator;
 //    textFiled.leftView = textFiledImv;
 //    textFiled.leftViewMode = UITextFieldViewModeAlways;
 }
-//设置tableViewHeader
+#pragma 设置tableViewHeader
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return self.view.height*250/1200;
 }
@@ -157,6 +171,11 @@ kRemoveCellSeparator;
     
     return headerView;
 }
+
+#pragma 设置tableViewFooter
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 300;
+}
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     UIView *footerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 300)];
     CGFloat bWidth = footerView.width-2;
@@ -165,18 +184,42 @@ kRemoveCellSeparator;
     [btn1 setTitle:@"已有账号" forState:UIControlStateNormal];
     [btn1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn1 setBackgroundColor:kSysColor];
+    [btn1 bk_addEventHandler:^(id sender) {
+        NSLog(@"已有账号");
+    } forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn2 setFrame:CGRectMake(bWidth/2+2, 50, bWidth/2, 50)];
     [btn2 setTitle:@"快速游戏" forState:UIControlStateNormal];
     [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn2 setBackgroundColor:kSysColor];
+    [btn2 bk_addEventHandler:^(id sender) {
+        NSLog(@"快速游戏");
+    } forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn3 setFrame:CGRectMake(0, 50+50+2, footerView.width, 50)];
     [btn3 setTitle:@"快速注册" forState:UIControlStateNormal];
     [btn3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn3 setBackgroundColor:kSysColor];
+    [btn3 bk_addEventHandler:^(id sender) {
+//        NSLog(@"快速注册");
+        NSLog(@"%d,%d",[self.userTextFiled.text isValid],[self.pwdTextFiled.text isValid]);
+        if (![self.userTextFiled.text isValid]) {
+            [self showErrorMsg:@"请输入手机号码"];
+        }else if (![self.pwdTextFiled.text isValid]) {
+            [self showErrorMsg:@"请输入密码"];
+        }else if (![self.userTextFiled.text isVAlidPhoneNumber]){
+            [self showErrorMsg:@"请输入正确的手机号码"];
+            self.userTextFiled.text = nil;
+        }else if (([self.pwdTextFiled.text length] < 6)){
+            [self showErrorMsg:@"请输入大于等于6位的密码"];
+            self.pwdTextFiled.text = nil;
+            NSLog(@"%lu",[self.pwdTextFiled.text length]);
+        }else{
+            [self showSuccessMsg:@"登陆成功"];
+        }
+    } forControlEvents:UIControlEventTouchUpInside];
     
     [footerView addSubview:btn1];
     [footerView addSubview:btn2];

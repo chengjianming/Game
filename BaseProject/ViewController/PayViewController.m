@@ -12,6 +12,7 @@
 #define kSysColor        [UIColor colorWithRed:31/255.0 green:109/255.0 blue:186/255.0 alpha:0.9]
 @interface PayViewController ()
 @property (strong,nonatomic) UIView  *rightView;
+@property (nonatomic,assign) NSInteger result;
 @end
 
 @implementation PayViewController
@@ -27,11 +28,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"订单确认";
+    //支付订单返回结果
+    self.result = 1;
     [self.view setBackgroundColor:[UIColor whiteColor]];
     //设置左侧支付方式选择
     [self setLeftView];
     //设置右侧显示详情
+    
     [self setRightView];
+    //设置左侧Navbar
+    [self setBack];
+   
     
     
     // Do any additional setup after loading the view.
@@ -64,20 +71,37 @@
 //    self.rightView.backgroundColor = [UIColor yellowColor];
     //设置实线
     [self setLine];
-    //设置订单详情
-    [self setOrder];
+    
     //设置虚线
     [self setVirtualLine];
     //设置充值按钮
     [self setPay];
+    
+    if (self.result) {
+        //设置订单详情
+        [self setOrder];
+        
+    }else{
+        [self setNoOrder];
+    }
     [self.view addSubview:self.rightView];
 }
 
 -(void)setLine{
-    CGFloat lineWidth = self.rightView.width;
+//    CGFloat lineWidth = self.rightView.width;
     UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.width/3*2, 2)];
     lineView.backgroundColor = kSysColor;
     [self.rightView addSubview:lineView];
+}
+
+-(void)setNoOrder{
+    CGFloat labelX = 30;
+    CGFloat labelY = 10;
+    CGFloat labelWidth = self.rightView.width - 30;
+    CGFloat labelHeight = 20;
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(labelX, labelY, labelWidth, labelHeight)];
+    label.text = @"没有未支付订单";
+    [self.rightView addSubview:label];
 }
 
 -(void)setOrder{
@@ -112,14 +136,34 @@
     [payBtn setTitle:@"立即充值" forState:UIControlStateNormal];
     [payBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [payBtn setBackgroundColor:kSysColor];
+    [payBtn bk_addEventHandler:^(id sender) {
+        NSLog(@"点击支付");
+    } forControlEvents:UIControlEventTouchUpInside];
     [self.rightView addSubview:payBtn];
     
 }
 
 - (void)setVirtualLine{
     UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 10*6+20*5+10, self.rightView.width, 2)];
-    lineView.backgroundColor = kSysColor;
+    UIImageView *vline = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon-virtualline"]];
+    vline.frame = CGRectMake(0, 0, lineView.width, lineView.height);
+    [lineView addSubview:vline];
     [self.rightView addSubview:lineView];
+}
+
+-(void)setBack{
+    //设置左侧Navbar
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    backBtn.frame = CGRectMake(0, 0, 15, 30);
+    
+    [backBtn setImage:[UIImage imageNamed:@"icon-back"] forState:UIControlStateNormal];
+    [backBtn bk_addEventHandler:^(id sender) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    self.navigationItem.leftBarButtonItem = backItem;
+    [self.navigationItem setLeftBarButtonItem:backItem];
 }
 
 - (void)didReceiveMemoryWarning {

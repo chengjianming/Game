@@ -64,6 +64,7 @@
     NSUInteger count = 0;
     while ([scanner scanUpToCharactersFromSet: whiteSpace  intoString: nil]) {
         count++;
+        NSLog(@"----------%lu",(unsigned long)count);
     }
 	
     return count;

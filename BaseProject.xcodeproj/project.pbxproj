@@ -68,8 +68,18 @@
 		8832FE701CCE234500E2BA3F /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE6F1CCE234500E2BA3F /* LoginTableViewController.m */; };
 		8832FE731CCE256C00E2BA3F /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE721CCE256C00E2BA3F /* UIView+Frame.m */; };
 		8832FE761CCE273700E2BA3F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE751CCE273700E2BA3F /* HomeViewController.m */; };
+		889652221CD0596F004E5EA4 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 889652211CD0596F004E5EA4 /* LoginModel.m */; };
+		889652251CD05C4E004E5EA4 /* LoginNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889652241CD05C4E004E5EA4 /* LoginNetManager.m */; };
+		8896522C1CD06186004E5EA4 /* icon-chjl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652271CD06186004E5EA4 /* icon-chjl@2x.png */; };
+		8896522D1CD06186004E5EA4 /* icon-gold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652281CD06186004E5EA4 /* icon-gold@2x.png */; };
+		8896522E1CD06186004E5EA4 /* icon-mima@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652291CD06186004E5EA4 /* icon-mima@2x.png */; };
+		8896522F1CD06186004E5EA4 /* icon-tu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8896522A1CD06186004E5EA4 /* icon-tu@2x.png */; };
+		889652301CD06186004E5EA4 /* icon-xfjl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8896522B1CD06186004E5EA4 /* icon-xfjl@2x.png */; };
+		889652341CD076A1004E5EA4 /* icon-virtualline.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652311CD076A1004E5EA4 /* icon-virtualline.png */; };
+		889652351CD076A1004E5EA4 /* icon-quit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652321CD076A1004E5EA4 /* icon-quit@2x.png */; };
+		889652381CD08E6E004E5EA4 /* icon-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652371CD08E6E004E5EA4 /* icon-back@2x.png */; };
+		8896524B1CD0C5BF004E5EA4 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8896524A1CD0C5BF004E5EA4 /* LoginViewModel.m */; };
 		88EC11701CCF3367003B41DA /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EC116F1CCF3367003B41DA /* UserTableViewController.m */; };
-		88EC11721CCF4F8F003B41DA /* quit.png in Resources */ = {isa = PBXBuildFile; fileRef = 88EC11711CCF4F8F003B41DA /* quit.png */; };
 		88EC11751CCF5750003B41DA /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EC11741CCF5750003B41DA /* PayViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -174,9 +184,23 @@
 		8832FE721CCE256C00E2BA3F /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		8832FE741CCE273700E2BA3F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		8832FE751CCE273700E2BA3F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		889652201CD0596F004E5EA4 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		889652211CD0596F004E5EA4 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		889652231CD05C4E004E5EA4 /* LoginNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginNetManager.h; sourceTree = "<group>"; };
+		889652241CD05C4E004E5EA4 /* LoginNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginNetManager.m; sourceTree = "<group>"; };
+		889652271CD06186004E5EA4 /* icon-chjl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-chjl@2x.png"; sourceTree = "<group>"; };
+		889652281CD06186004E5EA4 /* icon-gold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gold@2x.png"; sourceTree = "<group>"; };
+		889652291CD06186004E5EA4 /* icon-mima@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mima@2x.png"; sourceTree = "<group>"; };
+		8896522A1CD06186004E5EA4 /* icon-tu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-tu@2x.png"; sourceTree = "<group>"; };
+		8896522B1CD06186004E5EA4 /* icon-xfjl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-xfjl@2x.png"; sourceTree = "<group>"; };
+		889652311CD076A1004E5EA4 /* icon-virtualline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-virtualline.png"; path = "../icon-virtualline.png"; sourceTree = "<group>"; };
+		889652321CD076A1004E5EA4 /* icon-quit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-quit@2x.png"; path = "../icon-quit@2x.png"; sourceTree = "<group>"; };
+		889652371CD08E6E004E5EA4 /* icon-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-back@2x.png"; sourceTree = "<group>"; };
+		889652481CD0BEBC004E5EA4 /* GameRequestPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRequestPath.h; sourceTree = "<group>"; };
+		889652491CD0C5BF004E5EA4 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		8896524A1CD0C5BF004E5EA4 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		88EC116E1CCF3367003B41DA /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
 		88EC116F1CCF3367003B41DA /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
-		88EC11711CCF4F8F003B41DA /* quit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quit.png; sourceTree = "<group>"; };
 		88EC11731CCF5750003B41DA /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
 		88EC11741CCF5750003B41DA /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -424,6 +448,8 @@
 			children = (
 				3886C0BF1BD74B090014E661 /* BaseModel.h */,
 				3886C0C01BD74B090014E661 /* BaseModel.m */,
+				889652201CD0596F004E5EA4 /* LoginModel.h */,
+				889652211CD0596F004E5EA4 /* LoginModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,8 +457,11 @@
 		3886C0B11BD74A4A0014E661 /* NetManager */ = {
 			isa = PBXGroup;
 			children = (
+				889652481CD0BEBC004E5EA4 /* GameRequestPath.h */,
 				3886C0BC1BD74AFE0014E661 /* BaseNetManager.h */,
 				3886C0BD1BD74AFE0014E661 /* BaseNetManager.m */,
+				889652231CD05C4E004E5EA4 /* LoginNetManager.h */,
+				889652241CD05C4E004E5EA4 /* LoginNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -444,6 +473,7 @@
 				3886C0AD1BD749A00014E661 /* LaunchScreen.xib */,
 				3886C09F1BD748830014E661 /* Main.storyboard */,
 				3886C0B81BD74A700014E661 /* PrefixHeader.pch */,
+				889652261CD06186004E5EA4 /* 游戏图标 */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -487,7 +517,6 @@
 				8832FE6F1CCE234500E2BA3F /* LoginTableViewController.m */,
 				88EC11731CCF5750003B41DA /* PayViewController.h */,
 				88EC11741CCF5750003B41DA /* PayViewController.m */,
-				88EC11711CCF4F8F003B41DA /* quit.png */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -497,8 +526,25 @@
 			children = (
 				3886C0B91BD74AE90014E661 /* BaseViewModel.h */,
 				3886C0BA1BD74AE90014E661 /* BaseViewModel.m */,
+				889652491CD0C5BF004E5EA4 /* LoginViewModel.h */,
+				8896524A1CD0C5BF004E5EA4 /* LoginViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		889652261CD06186004E5EA4 /* 游戏图标 */ = {
+			isa = PBXGroup;
+			children = (
+				889652311CD076A1004E5EA4 /* icon-virtualline.png */,
+				889652321CD076A1004E5EA4 /* icon-quit@2x.png */,
+				889652371CD08E6E004E5EA4 /* icon-back@2x.png */,
+				889652271CD06186004E5EA4 /* icon-chjl@2x.png */,
+				889652281CD06186004E5EA4 /* icon-gold@2x.png */,
+				889652291CD06186004E5EA4 /* icon-mima@2x.png */,
+				8896522A1CD06186004E5EA4 /* icon-tu@2x.png */,
+				8896522B1CD06186004E5EA4 /* icon-xfjl@2x.png */,
+			);
+			path = "游戏图标";
 			sourceTree = "<group>";
 		};
 		DEB62B47C560AA65E07ECFA4 /* Pods */ = {
@@ -589,12 +635,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3885C8E91BE8E8FB009441EA /* ios-social-sdk-login-quick.html in Resources */,
-				88EC11721CCF4F8F003B41DA /* quit.png in Resources */,
 				3885C8D81BE8E8FB009441EA /* UMShareEditViewController.xib in Resources */,
 				3885C8D61BE8E8FB009441EA /* UMSCommentInputController.xib in Resources */,
 				3885C8E51BE8E8FB009441EA /* ios-social-sdk-comment-detail.html in Resources */,
+				8896522C1CD06186004E5EA4 /* icon-chjl@2x.png in Resources */,
 				3886C0A31BD748830014E661 /* Assets.xcassets in Resources */,
 				3885C8EB1BE8E8FB009441EA /* ios-social-sdk-share-detail.html in Resources */,
+				8896522F1CD06186004E5EA4 /* icon-tu@2x.png in Resources */,
 				3885C8EC1BE8E8FB009441EA /* ios-social-sdk-share-quick.html in Resources */,
 				3885C8F71BE8E96A009441EA /* .gitignore in Resources */,
 				3885C8D51BE8E8FB009441EA /* UMSCommentDetailController.xib in Resources */,
@@ -603,18 +650,24 @@
 				3885C8EA1BE8E8FB009441EA /* ios-social-sdk-shake.html in Resources */,
 				3885C8E41BE8E8FB009441EA /* iOS-social-releasenote.html in Resources */,
 				3885C8DA1BE8E8FB009441EA /* UMSLoginViewController.xib in Resources */,
+				8896522D1CD06186004E5EA4 /* icon-gold@2x.png in Resources */,
+				889652381CD08E6E004E5EA4 /* icon-back@2x.png in Resources */,
 				3885C8E31BE8E8FB009441EA /* iOS-social-analytics-releasenote.html in Resources */,
 				3885C8D71BE8E8FB009441EA /* UMSCommentInputControlleriPad.xib in Resources */,
 				3885C8D91BE8E8FB009441EA /* UMShareEditViewControlleriPad.xib in Resources */,
 				3886C0AE1BD749A00014E661 /* LaunchScreen.xib in Resources */,
 				3885C8EE1BE8E8FB009441EA /* markdown.css in Resources */,
 				3885C8E61BE8E8FB009441EA /* ios-social-sdk-comment-quick.html in Resources */,
+				889652301CD06186004E5EA4 /* icon-xfjl@2x.png in Resources */,
 				3885C8D31BE8E8FB009441EA /* UMSocialLocalizable.strings in Resources */,
 				3886C0A11BD748830014E661 /* Main.storyboard in Resources */,
 				3885C8DB1BE8E8FB009441EA /* UMSnsAccountViewController.xib in Resources */,
+				889652341CD076A1004E5EA4 /* icon-virtualline.png in Resources */,
+				8896522E1CD06186004E5EA4 /* icon-mima@2x.png in Resources */,
 				3885C8DC1BE8E8FB009441EA /* UMSShareListController.xib in Resources */,
 				3885C8DD1BE8E8FB009441EA /* UMSocialSDKResourcesNew.bundle in Resources */,
 				3885C8ED1BE8E8FB009441EA /* ios-social-sdk-socialbar.html in Resources */,
+				889652351CD076A1004E5EA4 /* icon-quit@2x.png in Resources */,
 				3885C8E81BE8E8FB009441EA /* ios-social-sdk-login-detail.html in Resources */,
 				3885C8E71BE8E8FB009441EA /* ios-social-sdk-like.html in Resources */,
 			);
@@ -677,13 +730,16 @@
 			files = (
 				88EC11701CCF3367003B41DA /* UserTableViewController.m in Sources */,
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
+				8896524B1CD0C5BF004E5EA4 /* LoginViewModel.m in Sources */,
 				8832FE701CCE234500E2BA3F /* LoginTableViewController.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
 				3885C8FA1BE8E96A009441EA /* PSCollectionViewCell.m in Sources */,
 				3804CE531BD758F10046C8C8 /* NSString+PJR.m in Sources */,
 				3885C8F91BE8E96A009441EA /* PSCollectionView.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
+				889652251CD05C4E004E5EA4 /* LoginNetManager.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
+				889652221CD0596F004E5EA4 /* LoginModel.m in Sources */,
 				8832FE761CCE273700E2BA3F /* HomeViewController.m in Sources */,
 				88EC11751CCF5750003B41DA /* PayViewController.m in Sources */,
 				8832FE731CCE256C00E2BA3F /* UIView+Frame.m in Sources */,

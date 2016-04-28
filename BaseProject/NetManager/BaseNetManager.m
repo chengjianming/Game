@@ -51,6 +51,7 @@ static AFHTTPSessionManager *manager = nil;
             [percentPath appendFormat:@"&%@=%@", keys[i], params[keys[i]]];
         }
     }
+    NSLog(@"%@",percentPath);
     return [percentPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 

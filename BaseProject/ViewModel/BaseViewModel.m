@@ -29,4 +29,11 @@
     return _dataArr;
 }
 
+-(NSMutableDictionary *)dataDic{
+    if (!_dataDic) {
+        _dataDic= [NSMutableDictionary new];
+    }
+    return _dataDic;
+}
+
 @end

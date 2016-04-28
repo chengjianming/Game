@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #define kCompletionHandle completionHandle:(void(^)(id model, NSError *error))completionHandle
+//请求接口
+#define kPath @"http://120.27.141.125:8080/Asset-webapp/"
 
 @interface BaseNetManager : NSObject
 
