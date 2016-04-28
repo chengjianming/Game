@@ -147,8 +147,8 @@
         userLb.text = [NSString stringWithFormat:@"当前账户: %@",Name];
         UIButton *loutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [loutBtn setFrame:CGRectMake(self.view.width-50, 10, 50, 40)];
-        [loutBtn setImage:[UIImage imageNamed:@"error"] forState:UIControlStateNormal];
-        [loutBtn setBackgroundColor:[UIColor yellowColor]];
+        [loutBtn setImage:[UIImage imageNamed:@"icon-quit"] forState:UIControlStateNormal];
+        [loutBtn setBackgroundColor:[UIColor clearColor]];
         [headerView addSubview:userLb];
         [headerView addSubview:loutBtn];
         return headerView;
