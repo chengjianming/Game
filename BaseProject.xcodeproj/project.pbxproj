@@ -68,6 +68,7 @@
 		8832FE701CCE234500E2BA3F /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE6F1CCE234500E2BA3F /* LoginTableViewController.m */; };
 		8832FE731CCE256C00E2BA3F /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE721CCE256C00E2BA3F /* UIView+Frame.m */; };
 		8832FE761CCE273700E2BA3F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832FE751CCE273700E2BA3F /* HomeViewController.m */; };
+		88553BEB1CD2F6D20029B352 /* RegistViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 88553BEA1CD2F6D20029B352 /* RegistViewModel.m */; };
 		889652221CD0596F004E5EA4 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 889652211CD0596F004E5EA4 /* LoginModel.m */; };
 		889652251CD05C4E004E5EA4 /* LoginNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889652241CD05C4E004E5EA4 /* LoginNetManager.m */; };
 		8896522C1CD06186004E5EA4 /* icon-chjl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652271CD06186004E5EA4 /* icon-chjl@2x.png */; };
@@ -79,6 +80,8 @@
 		889652351CD076A1004E5EA4 /* icon-quit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652321CD076A1004E5EA4 /* icon-quit@2x.png */; };
 		889652381CD08E6E004E5EA4 /* icon-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 889652371CD08E6E004E5EA4 /* icon-back@2x.png */; };
 		8896524B1CD0C5BF004E5EA4 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8896524A1CD0C5BF004E5EA4 /* LoginViewModel.m */; };
+		889D4AA01CD21A11006ED3D9 /* RegistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D4A9F1CD21A11006ED3D9 /* RegistModel.m */; };
+		889D4AA31CD21A29006ED3D9 /* RegistNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 889D4AA21CD21A29006ED3D9 /* RegistNetManager.m */; };
 		88EC11701CCF3367003B41DA /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EC116F1CCF3367003B41DA /* UserTableViewController.m */; };
 		88EC11751CCF5750003B41DA /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88EC11741CCF5750003B41DA /* PayViewController.m */; };
 /* End PBXBuildFile section */
@@ -184,6 +187,8 @@
 		8832FE721CCE256C00E2BA3F /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		8832FE741CCE273700E2BA3F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		8832FE751CCE273700E2BA3F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		88553BE91CD2F6D20029B352 /* RegistViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewModel.h; sourceTree = "<group>"; };
+		88553BEA1CD2F6D20029B352 /* RegistViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewModel.m; sourceTree = "<group>"; };
 		889652201CD0596F004E5EA4 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		889652211CD0596F004E5EA4 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		889652231CD05C4E004E5EA4 /* LoginNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginNetManager.h; sourceTree = "<group>"; };
@@ -199,6 +204,10 @@
 		889652481CD0BEBC004E5EA4 /* GameRequestPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRequestPath.h; sourceTree = "<group>"; };
 		889652491CD0C5BF004E5EA4 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		8896524A1CD0C5BF004E5EA4 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		889D4A9E1CD21A11006ED3D9 /* RegistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistModel.h; sourceTree = "<group>"; };
+		889D4A9F1CD21A11006ED3D9 /* RegistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistModel.m; sourceTree = "<group>"; };
+		889D4AA11CD21A29006ED3D9 /* RegistNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistNetManager.h; sourceTree = "<group>"; };
+		889D4AA21CD21A29006ED3D9 /* RegistNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistNetManager.m; sourceTree = "<group>"; };
 		88EC116E1CCF3367003B41DA /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
 		88EC116F1CCF3367003B41DA /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
 		88EC11731CCF5750003B41DA /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
@@ -450,6 +459,8 @@
 				3886C0C01BD74B090014E661 /* BaseModel.m */,
 				889652201CD0596F004E5EA4 /* LoginModel.h */,
 				889652211CD0596F004E5EA4 /* LoginModel.m */,
+				889D4A9E1CD21A11006ED3D9 /* RegistModel.h */,
+				889D4A9F1CD21A11006ED3D9 /* RegistModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,6 +473,8 @@
 				3886C0BD1BD74AFE0014E661 /* BaseNetManager.m */,
 				889652231CD05C4E004E5EA4 /* LoginNetManager.h */,
 				889652241CD05C4E004E5EA4 /* LoginNetManager.m */,
+				889D4AA11CD21A29006ED3D9 /* RegistNetManager.h */,
+				889D4AA21CD21A29006ED3D9 /* RegistNetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -528,6 +541,8 @@
 				3886C0BA1BD74AE90014E661 /* BaseViewModel.m */,
 				889652491CD0C5BF004E5EA4 /* LoginViewModel.h */,
 				8896524A1CD0C5BF004E5EA4 /* LoginViewModel.m */,
+				88553BE91CD2F6D20029B352 /* RegistViewModel.h */,
+				88553BEA1CD2F6D20029B352 /* RegistViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -730,6 +745,7 @@
 			files = (
 				88EC11701CCF3367003B41DA /* UserTableViewController.m in Sources */,
 				3886C0BE1BD74AFE0014E661 /* BaseNetManager.m in Sources */,
+				88553BEB1CD2F6D20029B352 /* RegistViewModel.m in Sources */,
 				8896524B1CD0C5BF004E5EA4 /* LoginViewModel.m in Sources */,
 				8832FE701CCE234500E2BA3F /* LoginTableViewController.m in Sources */,
 				3804CE541BD758F10046C8C8 /* NSString+QRCode.m in Sources */,
@@ -743,11 +759,13 @@
 				8832FE761CCE273700E2BA3F /* HomeViewController.m in Sources */,
 				88EC11751CCF5750003B41DA /* PayViewController.m in Sources */,
 				8832FE731CCE256C00E2BA3F /* UIView+Frame.m in Sources */,
+				889D4AA01CD21A11006ED3D9 /* RegistModel.m in Sources */,
 				3835CFB71BD90E150024CA48 /* ViewController.m in Sources */,
 				3804CE511BD758F10046C8C8 /* AppDelegate+Category.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
 				3885C8FB1BE8E96A009441EA /* README.md in Sources */,
 				3886C0C11BD74B090014E661 /* BaseModel.m in Sources */,
+				889D4AA31CD21A29006ED3D9 /* RegistNetManager.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
 				3804CE521BD758F10046C8C8 /* NSObject+Common.m in Sources */,
 			);

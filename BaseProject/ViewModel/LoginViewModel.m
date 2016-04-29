@@ -17,12 +17,11 @@
 }
 
 -(void)getDataWithUserName:(NSString *)userName Pwd:(NSString *)pwd FromNetCompleteHandle:(CompletionHandle)completionHandle{
-    self.dataTask = [LoginNetManager getUserWithUserName:@"1052291325" Pwd:@"123456" completionHandle:^(LoginModel *model, NSError *error) {
+    self.dataTask = [LoginNetManager getUserWithUserName:userName Pwd:pwd completionHandle:^(LoginModel *model, NSError *error) {
         self.model = model;
-        NSLog(@"userData:%@",self.model.user);
+//        NSLog(@"userData:%@",self.model.user);
         completionHandle(error);
     }];
-    NSLog(@"userData:%@",self.model.user);
 }
 -(LoginUserModel *)user{
     

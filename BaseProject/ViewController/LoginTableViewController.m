@@ -9,6 +9,7 @@
 #import "LoginTableViewController.h"
 #import "UIView+Frame.h"
 #import "NSString+PJR.h"
+#import "RegistViewModel.h"
 //系统颜色
 #define kSysColor        [UIColor colorWithRed:31/255.0 green:109/255.0 blue:186/255.0 alpha:0.9]
 @interface LoginTableViewController ()
@@ -16,10 +17,17 @@
 @property (strong,nonatomic) UITextField  *pwdTextFiled;
 @property (strong,nonatomic) UIButton  *leftBtn;
 @property (strong,nonatomic) UIButton  *rightBtn;
+@property (strong,nonatomic) RegistViewModel *registVM;
 @end
 
 @implementation LoginTableViewController
 
+-(RegistViewModel *)registVM{
+    if (!_registVM) {
+        _registVM = [RegistViewModel new];
+    }
+    return _registVM;
+}
 
 -(UIButton *)leftBtn{
     if (!_leftBtn) {
@@ -76,6 +84,26 @@ kRemoveCellSeparator;
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = backItem;
     [self.navigationItem setLeftBarButtonItem:backItem];
+    
+    
+    //发送注册请求
+    [self.registVM getDataWithUserName:@"qynbs123" Pwd:@"123456" UserId:@"q111w1111" PhoneNumber:@"18868196382" FromNetCompleteHandle:^(NSError *error) {
+//        NSDictionary *dic = self.registVM.model;
+        if (error) {
+
+            [self showErrorMsg:error.localizedDescription];
+        }
+        if (self.registVM.model.succ.integerValue == 1 ) {
+            [self showSuccessMsg:self.registVM.model.msg];
+        }else{
+            [self showErrorMsg:self.registVM.model.msg];
+        }
+        [self.tableView reloadData];
+    }];
+    //
+    
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
