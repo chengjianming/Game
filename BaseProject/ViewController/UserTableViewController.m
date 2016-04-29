@@ -49,9 +49,6 @@
     [self.navigationItem setLeftBarButtonItem:backItem];
     
     //获取数据
-//    [self.LoginVM getDataFromNetCompleteHandle:^(NSError *error) {
-//        
-//    }];
     [self.LoginVM getDataWithUserName:@"asd123" Pwd:@"asd123" FromNetCompleteHandle:^(NSError *error) {
         if (error) {
             [self showErrorMsg:error.localizedDescription];

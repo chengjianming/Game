@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CheckViewModel.h"
 @interface PayViewController : UIViewController
-
+@property (strong,nonatomic) CheckViewModel  *checkVM;
 @end

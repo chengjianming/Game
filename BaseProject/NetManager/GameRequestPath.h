@@ -27,7 +27,12 @@
 //6.用户是否在线
 #define kCheckUsePath       @"http://120.27.141.125:8080/Asset-webapp/checkuser.do"
 
+//查询订单接口
+
+#define kCheckPath          @"http://120.27.141.125:8080/Asset-webapp/ordershow.do"
+
+
 //7.聚禾富支付结果保存更改接口 和 8.游戏支付结果保存和更改接口
-#define kGamePayRetUrlPath  @"http://120.27.141.125:8080/Asset-webapp/gamepayreturl.do"
+//#define kGamePayRetUrlPath  @"http://120.27.141.125:8080/Asset-webapp/gamepayreturl.do"
 
 #endif /* GameRequestPath_h */

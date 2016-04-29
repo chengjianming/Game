@@ -23,8 +23,8 @@
     //修改字体颜色及字体大小
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:17]};
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setFrame:CGRectMake(100, 100, 50, 50)];
-    [btn setTitle:@"login" forState:UIControlStateNormal];
+    [btn setFrame:CGRectMake(100, 100, 100, 50)];
+    [btn setTitle:@"注册" forState:UIControlStateNormal];
     [btn setBackgroundColor:[UIColor blueColor]];
     [btn bk_addEventHandler:^(id sender) {
         LoginTableViewController *ltvc = [[LoginTableViewController alloc]init];
@@ -33,9 +33,9 @@
     [self.view addSubview:btn];
     
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn1 setFrame:CGRectMake(100, 150, 50, 50)];
-    [btn1 setTitle:@"user" forState:UIControlStateNormal];
-    [btn1 setBackgroundColor:[UIColor yellowColor]];
+    [btn1 setFrame:CGRectMake(100, 200, 100, 50)];
+    [btn1 setTitle:@"个人" forState:UIControlStateNormal];
+    [btn1 setBackgroundColor:[UIColor greenColor]];
     [btn1 bk_addEventHandler:^(id sender) {
         UserTableViewController *uvc = [[UserTableViewController alloc]init];
         [self.navigationController pushViewController:uvc animated:YES];
@@ -43,8 +43,8 @@
     [self.view addSubview:btn1];
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn2 setFrame:CGRectMake(100, 200, 50, 50)];
-    [btn2 setTitle:@"pay" forState:UIControlStateNormal];
+    [btn2 setFrame:CGRectMake(100, 300, 100, 50)];
+    [btn2 setTitle:@"支付" forState:UIControlStateNormal];
     [btn2 setBackgroundColor:[UIColor redColor]];
     [btn2 bk_addEventHandler:^(id sender) {
         PayViewController *pvc = [[PayViewController alloc]init];

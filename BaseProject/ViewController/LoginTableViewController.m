@@ -10,6 +10,7 @@
 #import "UIView+Frame.h"
 #import "NSString+PJR.h"
 #import "RegistViewModel.h"
+#import "UserLoginTableViewController.h"
 //系统颜色
 #define kSysColor        [UIColor colorWithRed:31/255.0 green:109/255.0 blue:186/255.0 alpha:0.9]
 @interface LoginTableViewController ()
@@ -86,20 +87,7 @@ kRemoveCellSeparator;
     [self.navigationItem setLeftBarButtonItem:backItem];
     
     
-    //发送注册请求
-    [self.registVM getDataWithUserName:@"qynbs123" Pwd:@"123456" UserId:@"q111w1111" PhoneNumber:@"18868196382" FromNetCompleteHandle:^(NSError *error) {
-//        NSDictionary *dic = self.registVM.model;
-        if (error) {
-
-            [self showErrorMsg:error.localizedDescription];
-        }
-        if (self.registVM.model.succ.integerValue == 1 ) {
-            [self showSuccessMsg:self.registVM.model.msg];
-        }else{
-            [self showErrorMsg:self.registVM.model.msg];
-        }
-        [self.tableView reloadData];
-    }];
+   
     //
     
     
@@ -214,6 +202,8 @@ kRemoveCellSeparator;
     [btn1 setBackgroundColor:kSysColor];
     [btn1 bk_addEventHandler:^(id sender) {
         NSLog(@"已有账号");
+        UserLoginTableViewController *ulvc = [[UserLoginTableViewController alloc]init];
+        [self.navigationController pushViewController:ulvc animated:YES];
     } forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -232,21 +222,35 @@ kRemoveCellSeparator;
     [btn3 setBackgroundColor:kSysColor];
     [btn3 bk_addEventHandler:^(id sender) {
 //        NSLog(@"快速注册");
-        NSLog(@"%d,%d",[self.userTextFiled.text isValid],[self.pwdTextFiled.text isValid]);
-        if (![self.userTextFiled.text isValid]) {
-            [self showErrorMsg:@"请输入手机号码"];
-        }else if (![self.pwdTextFiled.text isValid]) {
-            [self showErrorMsg:@"请输入密码"];
-        }else if (![self.userTextFiled.text isVAlidPhoneNumber]){
-            [self showErrorMsg:@"请输入正确的手机号码"];
-            self.userTextFiled.text = nil;
-        }else if (([self.pwdTextFiled.text length] < 6)){
-            [self showErrorMsg:@"请输入大于等于6位的密码"];
-            self.pwdTextFiled.text = nil;
-            NSLog(@"%lu",[self.pwdTextFiled.text length]);
-        }else{
-            [self showSuccessMsg:@"登陆成功"];
-        }
+//        NSLog(@"%d,%d",[self.userTextFiled.text isValid],[self.pwdTextFiled.text isValid]);
+//        if (![self.userTextFiled.text isValid]) {
+//            [self showErrorMsg:@"请输入手机号码"];
+//        }else if (![self.pwdTextFiled.text isValid]) {
+//            [self showErrorMsg:@"请输入密码"];
+//        }else if (![self.userTextFiled.text isVAlidPhoneNumber]){
+//            [self showErrorMsg:@"请输入正确的手机号码"];
+//            self.userTextFiled.text = nil;
+//        }else if (([self.pwdTextFiled.text length] < 6)){
+//            [self showErrorMsg:@"请输入大于等于6位的密码"];
+//            self.pwdTextFiled.text = nil;
+//            NSLog(@"%lu",[self.pwdTextFiled.text length]);
+//        }else{
+//            [self showSuccessMsg:@"注册成功"];
+//        }
+        //发送注册请求
+        [self.registVM getDataWithUserName:@"qynbs123" Pwd:@"123456" UserId:@"q111w1111" PhoneNumber:@"18868196382" FromNetCompleteHandle:^(NSError *error) {
+            //        NSDictionary *dic = self.registVM.model;
+            if (error) {
+                
+                [self showErrorMsg:error.localizedDescription];
+            }
+            if (self.registVM.model.succ.integerValue == 1 ) {
+                [self showSuccessMsg:self.registVM.model.msg];
+            }else{
+                [self showErrorMsg:self.registVM.model.msg];
+            }
+            [self.tableView reloadData];
+        }];
     } forControlEvents:UIControlEventTouchUpInside];
     
     [footerView addSubview:btn1];

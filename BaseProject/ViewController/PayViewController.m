@@ -8,14 +8,31 @@
 
 #import "PayViewController.h"
 #import "UIView+Frame.h"
+#import "NSObject+Common.h"
+
 //系统颜色
 #define kSysColor        [UIColor colorWithRed:31/255.0 green:109/255.0 blue:186/255.0 alpha:0.9]
 @interface PayViewController ()
 @property (strong,nonatomic) UIView  *rightView;
 @property (nonatomic,assign) NSInteger result;
+@property (strong,nonatomic) NSMutableArray  *userArr;
 @end
 
 @implementation PayViewController
+
+-(CheckViewModel *)checkVM{
+    if (!_checkVM) {
+        _checkVM = [CheckViewModel new];
+    }
+    return _checkVM;
+}
+
+-(NSArray *)userArr{
+    if (!_userArr) {
+        _userArr = [NSMutableArray new];
+    }
+    return _userArr;
+}
 
 -(UIView *)rightView{
     if (!_rightView) {
@@ -33,12 +50,31 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     //设置左侧支付方式选择
     [self setLeftView];
-    //设置右侧显示详情
     
-    [self setRightView];
     //设置左侧Navbar
     [self setBack];
-   
+    //订单详情
+   [self.checkVM getDataWithUserId:@"123456" FromNetCompleteHandle:^(NSError *error) {
+       if (error) {
+           [self showErrorMsg:error.localizedDescription];
+       }
+       CheckModel *model = self.checkVM.model;
+       NSLog(@"CheckModel:%@",model);
+       if (model.succ.integerValue == 1) {
+           [self showSuccessMsg:model.msg];
+           NSString *yuanbao = [NSString stringWithFormat:@"%ld元宝",model.Pay_money.integerValue*100/10+model.Pay_money.integerValue*100%10];
+           NSString *yuan = [model.Pay_money stringByAppendingString:@"元"];
+           [self.userArr setArray: @[yuan,model.Game_num,yuanbao,@"123456",@""]];
+           NSLog(@"userArr:%@",self.userArr);
+           //设置右侧显示详情
+           
+           [self setRightView];
+           
+       }else{
+           [self showErrorMsg:model.msg];
+       }
+//       [self.view setNeedsDisplay];
+   }];
     
     
     // Do any additional setup after loading the view.
@@ -107,21 +143,24 @@
 -(void)setOrder{
     NSArray *orderArr = @[@"支付金额: ",@"游戏名称: ",@"商品名称: ",@"购买账号:",@"请确认订单再进行充值"];
     //接口解析后将传入的数据放进这个数组
-    NSArray *userArr = @[@"98.0元",@"东方不败",@"980元宝",@"baobao123",@""];
+//    NSArray *userArr = @[@"98.0元",@"东方不败",@"980元宝",@"baobao123",@""];
+    NSArray *userArr = self.userArr;
     CGFloat labelX = 30;
     CGFloat labelY = 10;
     CGFloat labelWidth = self.rightView.width - 30;
     CGFloat labelHeight = 20;
-    for (int i = 0; i < orderArr.count; i++) {
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(labelX, labelY*(i+1)+labelHeight*i, labelWidth, labelHeight)];
-        label.text = [[orderArr[i] stringByAppendingString:@" "]stringByAppendingString:userArr[i]];
-        if (i == 0) {
-            
+    if (userArr.count == 5) {
+        for (int i = 0; i < orderArr.count; i++) {
+            UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(labelX, labelY*(i+1)+labelHeight*i, labelWidth, labelHeight)];
+            label.text = [[orderArr[i] stringByAppendingString:@" "]stringByAppendingString:userArr[i]];
+            if (i == 0) {
+                
+            }
+            if (i == 4) {
+                label.textColor = kSysColor;
+            }
+            [self.rightView addSubview:label];
         }
-        if (i == 4) {
-            label.textColor = kSysColor;
-        }
-        [self.rightView addSubview:label];
     }
 }
 

@@ -34,6 +34,14 @@
 //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
 //    self.window.rootViewController = nvc;
     
+    
+    
+//    NSRegularExpression *regular = [NSRegularExpression regularExpressionWithPattern:@"[a-zA-Z.-]" options:0 error:NULL];
+//    NSString *string = @"780元";
+//    NSString *result = [regular stringByReplacingMatchesInString:string options:0 range:NSMakeRange(0, [string length]) withTemplate:@""];
+//    NSLog(@"%@", result);
+//    
+    
 
     return YES;
 }
